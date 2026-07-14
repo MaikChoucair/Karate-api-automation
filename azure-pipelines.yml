@@ -4,18 +4,18 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-main
+  - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest
 
 steps:
-task: Gradle@3
-  inputs:
-    gradleWrapperFile: 'gradlew'
-    tasks: 'clean test'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '21'
-    jdkArchitectureOption: 'x64'
+  - task: Gradle@3
+    inputs:
+      gradleWrapperFile: gradlew
+      tasks: clean test
+      publishJUnitResults: true
+      testResultsFiles: '**/TEST-*.xml'
+      javaHomeOption: JDKVersion
+      jdkVersionOption: '21'
+      jdkArchitectureOption: x64
