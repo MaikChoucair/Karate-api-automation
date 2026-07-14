@@ -14,3 +14,4 @@ testResultsFiles: '**/TEST-*.xml'
 javaHomeOption: 'JDKVersion'
 jdkVersionOption: '21'
 jdkArchitectureOption: 'x64'
+``
