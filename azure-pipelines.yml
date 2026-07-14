@@ -2,16 +2,15 @@ trigger:
 - main
 
 pool:
-vmImage: 'ubuntu-latest'
+vmImage: ubuntu-latest
 
 steps:
 - task: Gradle@3
 inputs:
-gradleWrapperFile: 'gradlew'
-tasks: 'clean test'
+gradleWrapperFile: gradlew
+tasks: clean test
 publishJUnitResults: true
 testResultsFiles: '**/TEST-*.xml'
-javaHomeOption: 'JDKVersion'
+javaHomeOption: JDKVersion
 jdkVersionOption: '21'
-jdkArchitectureOption: 'x64'
-``
+jdkArchitectureOption: x64
